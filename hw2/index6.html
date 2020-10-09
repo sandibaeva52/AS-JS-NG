@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Homework 2</title>
+</head>
+
+<body>
+    <h2>Welcome to my <a href="https://github.com/sandibaeva52/">page</a></h2>
+    <p id="paragraph">This is the first paragraph</p>
+<button id="btn" onClick="changeValue()">Нажми на меня</button>
+<input type="text" id="first">
+<input type="text" id="second">
+
+<script type="text/javascript">
+
+    function changeValue(){
+       var firstText=document.getElementById('first').value;
+       var secondText=document.getElementById('second').value;
+        document.getElementById('first').value= secondText;
+        document.getElementById('second').value= firstText;
+    }
+</script>
+
+</body>
+</html>

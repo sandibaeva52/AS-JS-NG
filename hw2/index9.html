@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Homework 2</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+    }
+    input{
+        display: block;
+        width: 300px;
+        height: 50px;
+    }
+    </style>
+<body>
+    <h2>Calculator</h2>
+    
+<input type="number" id="input1" placeholder="first input">
+<input type="number" id="input2" placeholder="second input">
+<input type="number" id="result" placeholder="result">
+<button id="add" onClick="add()">+</button>
+<button id="subtract" onClick="subtract()">-</button>
+<button id="multiply" onClick="multiply()">*</button>
+<button id="divide" onClick="divide()">/</button>
+<button id="equal" onClick="equal()">=</button>
+<button id="clear" onClick="clear()">C</button>
+
+<script type="text/javascript">
+
+    function add(){
+ var addition = document.getElementById('add');
+    }
+      function subtract(){
+ var subtraction = document.getElementById('subtract');
+    }
+      function multiply(){
+ var multiplication = document.getElementById('multiply');
+    }
+      function divide(){
+ var division = document.getElementById('divide');
+    }
+      function equal(){
+ var res = document.getElementById('equal');
+    }
+     function clear(){
+ var clearing = document.getElementById('clear');
+    }
+</script>
+
+</body>
+</html>

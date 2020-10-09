@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Homework 2</title>
+</head>
+
+<body>
+    <h2>Welcome to my <a href="https://github.com/sandibaeva52/">page</a></h2>
+    <p id="paragraph">This is the first paragraph</p>
+<button id="btn" onClick="disable()">Заблокировать</button>
+<button id="btn2" onClick="enable()">Отблокировать</button>
+
+<input type="text" id="content">
+
+<script type="text/javascript">
+
+    function disable(){
+ var block = document.getElementById('content').disabled=true;
+        disable(block);
+    }
+     function enable(){
+ var unblock = document.getElementById('content').disabled=false;
+        enable(unblock);
+    }
+</script>
+
+</body>
+</html>
