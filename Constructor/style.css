@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+html,
+body {
+	/*background-color: rgb(95 150 215);*/
+	background-color: #419BD3;
+    height: auto;
+    width: 100%;
+
+}
+
+input[type='radio'] + label {
+    padding-left: 24px;
+    background: url('img/radio_off.png') transparent no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 17px;
+}
+input[type='radio']:checked + label {
+    background: url('img/radio_on.png') transparent no-repeat;
+    background-size: contain;
+}
+input[type='radio']:checked + label + img {
+    display: block !important;
+}
+input[type='radio'] {
+    display: none;
+}
+#menuItems img {
+    display: none;
+    position: absolute;
+    left: 37%;
+    width: 100px;
+
+}
+
+.menuItems {
+    
+}
+
+#first {
+    margin-top: -17px;
+}
+
+#second {
+    margin-top: -35px;
+}
+
+#third {
+    margin-top: -53px;
+}
+
+.main {
+    margin-left: 10%;
+    width: 90%;
+    
+    
+}
+
+.main img {
+    float: left;
+}
+
+h1 {
+    color: white;
+    font-weight: 100;
+    margin-left: 80px;
+    margin-top: 10px;
+
+}
+
+h2 {
+    color: white;
+    font-weight: 100;
+    margin-left: 80px;
+}
+
+p {
+    color: white;
+     float: left;
+    width: 100px;
+}
+
+label {
+    color: white;
+    clear:left;
+    margin-right: 5px;
+}
+
+.title {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+/*
+    border-radius: 5px;
+    border: solid #d6d6d6 1px;
+    clear: right;
+    float: right;
+    height: 30px;
+    margin-left: 60px;
+    margin-right: 52%;
+    margin-top: -17px;
+*/
+
+}
+.constructor{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section {
+    margin-top: 35px;
+    display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.listNav {
+    margin-left: 10%;
+     vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+}
+
+
+input[type='checkbox'] + label {
+    padding-left: 24px;
+    background: url('img/checkbox_off.png') transparent no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 17px;
+}
+input[type='checkbox']:checked + label {
+    background: url('img/checkbox_on.png') transparent no-repeat;
+    background-size: contain;
+}
+input[type='checkbox'] {
+    display: none;
+}
+
+/*
+#textBlock p {
+    float: left;
+    width: 100px;
+}
+#textBlock label {
+    clear:left;
+    margin-right: 5px;
+}
+*/
+#mainY {
+    margin-left: 15px;
+}
+#mainText {
+    border-radius: 5px;
+    border: solid #d6d6d6 1px;
+    height: 80px;
+    width: 400px;
+    margin-top: 5px;
+    
+}
+#slider p{
+ float: left;
+ width: 100px;
+}
+#slider label {
+    clear:left;
+    margin-right: 5px;
+}
+#addImage{
+     display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+#addImage p{
+    float: left;
+    width: 100px;
+}
+
+input[type='button']{
+  padding: 10px 20px;
+  background-color: forestgreen;
+  color: white;
+}
+#addImage input[type='url']{
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+}
+ #textCol p{
+ float: left;
+ width: 100px;
+}
+#themeCol p{
+ float: left;
+ width: 100px;
+}
+
