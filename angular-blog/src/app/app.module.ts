@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import {CommonModule} from '@angular/common';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    PostFormComponent
+    PostFormComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
