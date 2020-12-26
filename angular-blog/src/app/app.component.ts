@@ -11,6 +11,7 @@ export interface Post {
 })
 export class AppComponent {
   now: Date = new Date();
+  search = '';
   // toggle;
   posts: Post[] = [
     {title: 'Learn English', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, non! Dicta officiis illum itaque sit? Numquam labore veritatis nemo officiis facilis voluptatem praesentium natus tempora. Quos magnam qui repellendus dolores.', id: 1},
