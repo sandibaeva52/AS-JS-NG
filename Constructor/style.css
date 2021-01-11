@@ -1,44 +1,305 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
-html,
 body {
-	/*background-color: rgb(95 150 215);*/
-	background-color: #419BD3;
-    height: auto;
-    width: 100%;
-
+    background-color: #3498db;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
-
+main {
+    width: 65%;
+    margin: 0 auto;
+}
+#main {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+h2 {
+    font-weight: 200;
+}
+p {
+    width: 20%;
+    float: left;    
+    margin: 0;
+}
+.paragraph {
+    width: 20%;  
+    margin: 0;    
+    margin: 0 auto;
+    text-indent: 1.5em;
+    width: 100%;
+    background-color: inherit;    
+    padding: 5vw;
+    box-sizing: border-box;
+}
+.paragraph:first-letter {
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 250%; 
+   }
+span {
+    display: inline-block;
+}
+span:first-child {
+    margin-left: 0%;    
+    width: 50%;
+}
+span:first-child input{    
+    width: 80% !important;
+}
+form {
+    padding-right: 40%;
+}
+input {
+    margin: 0 0 1em 0;
+}
+input[type='radio'], input[type='checkbox']  {
+   opacity: 0;
+}
+input[type='checkbox'] + label {
+   padding-left: 24px;
+   background: url('img/checkbox_off.png') transparent no-repeat;
+   background-size: contain;
+   cursor: pointer;
+   height: 17px;
+}
+input[type='checkbox']:checked + label {
+   background: url('img/checkbox_on.png') transparent no-repeat;
+   background-size: contain;
+}
 input[type='radio'] + label {
-    padding-left: 24px;
-    background: url('img/radio_off.png') transparent no-repeat;
-    background-size: contain;
-    cursor: pointer;
-    height: 17px;
+   padding-left: 24px;
+   background: url('img/radio_off.png') transparent no-repeat;
+   background-size: contain;
+   cursor: pointer;
+   height: 17px;
 }
 input[type='radio']:checked + label {
-    background: url('img/radio_on.png') transparent no-repeat;
-    background-size: contain;
+   background: url('img/radio_on.png') transparent no-repeat;
+   background-size: contain;
 }
 input[type='radio']:checked + label + img {
     display: block !important;
 }
-input[type='radio'] {
-    display: none;
+input[type="text"],
+input[type="url"],
+textarea {
+    display: block;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: 80%;
 }
+textarea {
+    height: 6em;
+    margin: 0 0 1em 0;
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+    color: #ffffff;
+    border: 1px solid transparent;
+    background-color: #94CF40;
+    border-color: #4AA374;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+    height: 45px;
+
+}
+input[disabled],
+textarea[disabled] {
+opacity: 0.5;
+cursor: default;
+}
+.pinput {
+    margin: 1em 0;
+}
+.section {
+    width: 100%;
+    clear: both;
+    margin: 2.5em 0;
+}
+#logo {
+    float: left;
+    margin-right: 2em
+}
+#addSlide {
+    margin-top: auto;    
+    margin-left: 1%;
+    float: left;
+}
+#inputAddSlide {
+    float: left; 
+    width: 50%;
+}
+.left-section {
+     margin-left: 20%;    
+     position: relative;
+}
+.left-section img {
+    float: right;
+    width: 100px;
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: 0;
+}
+.header {
+    display: inline;
+
+    width: 100%;
+    height: 100px;
+}
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+}
+
+
+/*slider*/
+.sliderImg{
+    height: 40%;
+    position: relative;
+    float: left;
+
+}
+.slider2Img{
+    position: absolute;
+    margin-left: 0; 
+    opacity: 1;
+}
+header, section, footer {
+    width: 80vw;
+    margin: 0 auto;
+}
+header {
+    height: 14vw;
+}
+header img {
+    width: 10vw;
+    float: left;
+}
+header h1, header h2 {
+    float: left;
+    width: 80%;
+    line-height: 250%;
+}
+
+#navHorizontal {
+    width: 100%;    
+    height: 5vw;
+}
+
+#navHorizontal ul li a {
+    line-height: 5vw;
+    margin: 0 2vw;
+    
+}
+#navVerticalLeft + section{
+    width: 80%;
+    float: right;
+}
+#navVerticalRight + section{
+    width: 80%;
+    float: left;
+}
+#navVerticalLeft ul li, #navVerticalRight ul li {
+    width: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+#navVerticalLeft {
+    width: 20%;
+    float: left;
+}
+#navVerticalRight {
+    width: 20%;
+    float: right;
+}
+nav, .paragraph {
+    background-color: rgba(255,255,255,0.2);
+}
+nav ul li {
+    float: left;
+    width: 10%;
+    list-style:none;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: capitalize;    
+}
+#content{
+    margin: 0px auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-constructor {
+    float: left;
+    margin-right: 2em;
+     width: 250px;
+    /* margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 30px;  */
+}
+.title-constructor{
+    display:inline;
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    position: relative;
+
+}
+
+.description-constructor{
+    margin-right: 30px;
+    font-weight: 200;
+    float: left;
+    width: 80%;
+    line-height: 250%;
+}
+
+
 #menuItems img {
     display: none;
     position: absolute;
-    left: 37%;
+    left: 67%;
     width: 100px;
-
+    top: 30px;
 }
 
 .menuItems {
-    
+     margin-left: 20%;    
+     position:relative;
 }
 
 #first {
@@ -53,155 +314,21 @@ input[type='radio'] {
     margin-top: -53px;
 }
 
-.main {
-    margin-left: 10%;
-    width: 90%;
-    
-    
+.nav-constructor{
+display: inline;
+align-items: center;
+text-align: center;
 }
 
-.main img {
-    float: left;
+.photo-constructor{
+width: 500px;
+height: 200px;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
-h1 {
-    color: white;
-    font-weight: 100;
-    margin-left: 80px;
-    margin-top: 10px;
-
-}
-
-h2 {
-    color: white;
-    font-weight: 100;
-    margin-left: 80px;
-}
-
-p {
-    color: white;
-     float: left;
-    width: 100px;
-}
-
-label {
-    color: white;
-    clear:left;
-    margin-right: 5px;
-}
-
-.title {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-
-/*
-    border-radius: 5px;
-    border: solid #d6d6d6 1px;
-    clear: right;
-    float: right;
-    height: 30px;
-    margin-left: 60px;
-    margin-right: 52%;
-    margin-top: -17px;
-*/
-
-}
-.constructor{
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.section {
-    margin-top: 35px;
+h1, h2 {
     display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+    align-items: center;
 }
-
-.listNav {
-    margin-left: 10%;
-     vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-}
-
-
-input[type='checkbox'] + label {
-    padding-left: 24px;
-    background: url('img/checkbox_off.png') transparent no-repeat;
-    background-size: contain;
-    cursor: pointer;
-    height: 17px;
-}
-input[type='checkbox']:checked + label {
-    background: url('img/checkbox_on.png') transparent no-repeat;
-    background-size: contain;
-}
-input[type='checkbox'] {
-    display: none;
-}
-
-/*
-#textBlock p {
-    float: left;
-    width: 100px;
-}
-#textBlock label {
-    clear:left;
-    margin-right: 5px;
-}
-*/
-#mainY {
-    margin-left: 15px;
-}
-#mainText {
-    border-radius: 5px;
-    border: solid #d6d6d6 1px;
-    height: 80px;
-    width: 400px;
-    margin-top: 5px;
-    
-}
-#slider p{
- float: left;
- width: 100px;
-}
-#slider label {
-    clear:left;
-    margin-right: 5px;
-}
-#addImage{
-     display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-#addImage p{
-    float: left;
-    width: 100px;
-}
-
-input[type='button']{
-  padding: 10px 20px;
-  background-color: forestgreen;
-  color: white;
-}
-#addImage input[type='url']{
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-
-}
- #textCol p{
- float: left;
- width: 100px;
-}
-#themeCol p{
- float: left;
- width: 100px;
-}
-
