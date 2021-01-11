@@ -6,52 +6,45 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Client } from 'src/app/types';
 
 @Component({
-selector: 'app-clients',
-templateUrl: './clients.component.html',
-styleUrls: ['./clients.component.css']
+  selector: 'app-clients',
+  templateUrl: './clients.component.html',
+  styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnChanges, AfterViewInit {
-@Input() clients: Client[];
+  @Input()
+    clients: Client[] = [];
 
-displayedColumns: string[] = ['photo', 'name', 'surname', 'age', 'phone'];
-dataSource: MatTableDataSource<Client>;
+  displayedColumns: string[] = ['photo', 'name', 'surname', 'age', 'phone'];
 
-dataSource: MatTableDataSource<Client>;
+  dataSource!: MatTableDataSource<Client>;
 
-// следим за атрибутами сортировки и пагинации
-@ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-@ViewChild(MatSort, { static: false }) sort: MatSort;
+  // следим за атрибутами сортировки и пагинации
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-constructor(
-private router: Router) {}
+  constructor() { }
 
-ngOnChanges(){
-this.dataSource = new MatTableDataSource(this.clients);
-}
+  ngOnChanges() {
+    this.dataSource = new MatTableDataSource(this.clients);
+  }
 
-ngAfterViewInit() {
-this.dataSource.paginator = this.paginator;
-this.dataSource.sort = this.sort;
-}
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
 
-// МЕТОД applyFilter() срабатывает на keyup
+  // МЕТОД applyFilter() срабатывает на keyup
 
-goToClient(id) {
-this.router.navigate([`client/${id}`]);
-}
+  applyFilter(event: Event) {
+    // достаем значение переменной для фильтрации из пришедшего события
+    const filterValue = (event.target as HTMLInputElement).value;
 
-// МЕТОД applyFilter() срабатывает на keyup
+    // устанавливаем значение переменной для фильтрации и обрезаем пробелы
+    this.dataSource.filter = filterValue.trim().toLowerCase();
 
-applyFilter(event: Event) {
-// достаем значение переменной для фильтрации из пришедшего события
-const filterValue = (event.target as HTMLInputElement).value;
-
-// устанавливаем значение переменной для фильтрации и обрезаем пробелы
-this.dataSource.filter = filterValue.trim().toLowerCase();
-
-// обновляем первую страницу пагинации
-if (this.dataSource?.paginator) {
-this.dataSource.paginator.firstPage();
-}
-}
+    // обновляем первую страницу пагинации
+    if (this.dataSource?.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
 }

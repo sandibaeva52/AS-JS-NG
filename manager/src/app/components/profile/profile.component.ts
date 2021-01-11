@@ -9,7 +9,7 @@ import { Client } from 'src/app/types';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  userId: string='';
+  // userId: string='';
   clients: Client[] = [];
   constructor(private route:ActivatedRoute, private dataService: DataService) { }
 
@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
     this.route.params.subscribe(
       (params) => {
         this.dataService.getClients(params.userId).subscribe((data)=>{
-          console.log(data);
+          // console.log(data);
           this.clients=data.clients})
       }
     )
